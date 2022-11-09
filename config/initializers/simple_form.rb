@@ -1,4 +1,5 @@
 # config/initializers/simple_form.rb
+require 'simple_form'
 
 SimpleForm.setup do |config|
   # Wrappers configration
