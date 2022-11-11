@@ -1,13 +1,14 @@
-%# app/views/quotes/index.html.erb %>
+<%# app/views/quotes/index.html.erb %>
 
 <main class="container">
-  <div class="header">
-    <h1>Quotes</h1>
-    <%= link_to "New quote",
-                new_quote_path,
-                class: "btn btn--primary", 
-                data: { turbo: true }%>
-  </div>
+    <div class="header">
+      <h1>Quotes</h1>
+      <%= link_to "New quote",
+                  new_quote_path,
+                  data: { turbo_frame: "_top" },
+                  class: "btn btn--primary",
+                  data: { turbo_frame: dom_id(Quote.new) } %>    
+</div>
 
   <%= render @quotes %>
 </main>
